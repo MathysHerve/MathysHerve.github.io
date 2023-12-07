@@ -1,0 +1,12 @@
+// Add Variable changes here
+@import 'variables';
+
+$card-border-radius: 30px;
+$navbar-padding-x: $padding-left-right;
+
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+.main-nav-bar {
+    background-color: inherit;
+}
