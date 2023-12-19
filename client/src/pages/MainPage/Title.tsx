@@ -1,12 +1,20 @@
 import React from 'react'
 
 interface Prop {
+  text: string;
   customClass? : string;
 }
 
-const Title = ({customClass}: Prop) => {
+const Title = ({text, customClass}: Prop) => {
+  const characters = text.split("");
+
   return (
-    <h1 className={customClass}>Hi, I'm Mathys</h1>
+    <div className={customClass}>
+      {characters.map((char, index) => (
+        <span className="fadeable-char" key={index}>{char}</span>
+      )
+      )}
+    </div>
   )
 }
 
