@@ -1,38 +1,56 @@
-@import 'variables';
+@import "variables";
+
+.animation {
+  position: sticky;
+}
+
+.animation-canvas {
+  min-width: 50%;
+  max-height: 80vh;
+}
 
 .annotation-container {
-    padding-bottom: 90vh;
+  min-width: 50%;
+}
+
+.annotation-container {
+  padding-bottom: 90vh;
 }
 
 .annotation-container:first-of-type {
-    padding-top: 20vh;
+  padding-top: 20vh;
 }
 
 .annotation-card {
-    border-radius: 10px;
-    background-color: rgb(228, 228, 228);
-    padding: 10px;
-    width: 33%;
-    box-sizing: border-box;
-    padding-left: 20px;
+  border-radius: 10px;
+  background-color: rgb(228, 228, 228);
+  padding: 10px;
+  width: 80%;
+  box-sizing: border-box;
+  padding-left: 20px;
 }
 
-
 .dark .annotation-card {
-    background-color: #212529;
+  background-color: #212529;
 }
 
 .canvas {
-    padding-left: $padding-left-right;
-    padding-right: $padding-left-right;
+  padding-left: $padding-left-right;
+  padding-right: $padding-left-right;
+  display: flex;
 }
 
-.intro-algorithm { 
-    padding-top: 20vh;
+.intro-algorithm {
+  padding-top: 10vh;
+  padding-bottom: 20vh;
+}
+
+.intro-title {
+  padding-top: 10vh;
 }
 
 .centered-container {
-    display: flex;        
-    justify-content: center;    
-    text-align: center;  
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }

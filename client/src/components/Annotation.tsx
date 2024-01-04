@@ -1,18 +1,31 @@
-import React, { ReactNode } from 'react'
+import React, { ReactNode, useEffect } from "react";
 
-interface Props { 
-    children: ReactNode;
+export enum AnnotationEffect {
+  "ON_SCROLL_BELOW",
+  "ON_SCROLL_ABOVE",
+  "ON_ENTER_SCREEN",
 }
 
-const Annotation = ({children}: Props) => {
+interface Props {
+  children: ReactNode;
+  effect?: {}; // TODO
+}
+
+const Annotation = ({ children, effect }: Props) => {
+  const onEnterScreenEffect =
+    !!effect && (effect[AnnotationEffect.ON_ENTER_SCREEN] ?? null);
+
+  const onScrollAbove =
+    !!effect && (effect[AnnotationEffect.ON_SCROLL_ABOVE] ?? null);
+
+  const onScrollBelow =
+    !!effect && (effect[AnnotationEffect.ON_SCROLL_BELOW] ?? null);
 
   return (
     <div className="annotation-container">
-        <div className="annotation-card">
-            {children}
-        </div>
+      <div className="annotation-card">{children}</div>
     </div>
-  )
-}
+  );
+};
 
-export default Annotation
+export default Annotation;

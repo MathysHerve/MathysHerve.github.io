@@ -3,7 +3,7 @@ import MainPage from "./pages/MainPage/MainPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {DarkModeProvider } from './DarkModeContext'
 import { useReducer, useState } from "react";
-import Knapsack from "./pages/Knapsack/Knapsack";
+import Knapsack from "./pages/Algorithms/Knapsack/Knapsack";
 
 function App() {
 
