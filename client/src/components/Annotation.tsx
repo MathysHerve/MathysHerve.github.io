@@ -1,28 +1,42 @@
-import React, { ReactNode, useEffect } from "react";
+import React, { ReactNode, useEffect, useRef } from "react";
 
-export enum AnnotationEffect {
-  "ON_SCROLL_BELOW",
-  "ON_SCROLL_ABOVE",
-  "ON_ENTER_SCREEN",
-}
 
 interface Props {
   children: ReactNode;
-  effect?: {}; // TODO
+  onExitScreen?: () => void;
+  onEnterScreen?: () => void;
 }
 
-const Annotation = ({ children, effect }: Props) => {
-  const onEnterScreenEffect =
-    !!effect && (effect[AnnotationEffect.ON_ENTER_SCREEN] ?? null);
+const Annotation = ({ children, onExitScreen, onEnterScreen }: Props) => {
 
-  const onScrollAbove =
-    !!effect && (effect[AnnotationEffect.ON_SCROLL_ABOVE] ?? null);
+  const ref = useRef(null);
 
-  const onScrollBelow =
-    !!effect && (effect[AnnotationEffect.ON_SCROLL_BELOW] ?? null);
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && onEnterScreen) {
+          onEnterScreen();
+        }
+        else if (!entry.isIntersecting && onExitScreen){
+          onExitScreen();
+        }
+      })
+
+    })
+    if (ref.current) {
+      observer.observe(ref.current)
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+
 
   return (
-    <div className="annotation-container">
+    <div ref={ref} className="annotation-container">
       <div className="annotation-card">{children}</div>
     </div>
   );

@@ -7,7 +7,7 @@ interface Props {
 
 const Animation = ({ id, children }: Props) => {
   return (
-    <div id={id} className="animation">
+    <div data-id={id} className="animation">
       {children}
     </div>
   );
