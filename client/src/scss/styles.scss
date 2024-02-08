@@ -6,15 +6,7 @@ $navbar-padding-x: $padding-left-right;
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
-.main-nav-bar {
-    background-color: inherit;
-}
-
-.dark {
-    background-color: $background-color-dark;
-    color: $text-color-dark
-}
-
 @media (prefers-color-scheme: dark) {
     
 }
+

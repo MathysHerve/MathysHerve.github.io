@@ -7,7 +7,6 @@ import "bootstrap/dist/css/bootstrap.css";
 
 import "./scss/styles.scss"
 import "./scss/Page.scss"
-import "./scss/animation.scss"
 
 
 

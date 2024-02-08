@@ -1,105 +1,14 @@
 @import "variables";
 
-.intro-text {
-  padding-top: 300px;
-  padding-bottom: 300px;
-  font-size: 80px;
-  width: 100%;
-  animation: fallInFromTop 1s ease-out;
-  animation-fill-mode: forwards;
+h1 {
+  font-size: 60px;
+  font-weight: 350;
 }
 
-@media only screen and (max-width: 800px) {
-  .intro-text {
+
+@media only screen and (max-width: 600px) {
+  h1 {
     font-size: 40px;
-    padding-top: 150px;
-    padding-bottom: 150px;
   }
-}
-
-@keyframes fallInFromTop {
-  from {
-    opacity: 0;
-    transform: translateY(-10%);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fadeable-char {
-  transition: opacity 0.2s ease; /* Adjust the duration and timing function as needed */
-}
-
-.fadeable-char:hover {
-  opacity: 0;
-}
-
-.project-cards {
-  padding-bottom: 100px;
-}
-
-.blog-cards {
-  padding-bottom: 100px;
-}
-
-.card-image {
-  padding: 10px;
-}
-
-.page {
-  padding-left: $padding-left-right !important;
-  padding-right: $padding-left-right !important;
-}
-
-// Cute Toggle Element
-
-.toggle-div {
-  display: flex;
-}
-
-.toggle-text {
-  padding-right: 10px;
-  font-size: 20px;
-  font-weight: 500;
-  &.dark {
-    background-color: inherit;
-    color: $text-color-dark;
-  }
-}
-
-.toggle-container {
-  position: relative;
-  padding: 3px;
-  width: 60px;
-  height: 30px;
-  background-color: #ccc;
-  border-radius: 15px;
-  overflow: hidden;
-  &.dark {
-    background-color: #313131;
-  }
-}
-
-.toggle-button {
-  width: 50%;
-  height: 100%;
-  background-color: rgb(46, 46, 46);
-  border: none;
-  border-radius: 15px;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-  &.dark {
-    background-color: lightgray;
-  }
-}
-
-.toggle-container.active .toggle-button {
-  transform: translateX(100%);
-}
-
-.slider {
-  width: 100%;
-  height: 100%;
+  
 }

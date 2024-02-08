@@ -1,0 +1,113 @@
+@import "variables";
+
+.visible {
+  opacity: 1!important;
+}
+
+.hidden{
+  display: none!important;
+}
+
+.fixed {
+  position: fixed;
+  left: 50%;
+  bottom: 25%;
+  min-height: 50vh;
+}
+
+.animation-canvas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 50vh;
+  padding-right: $padding-left-right;
+}
+
+.animation-img {
+  opacity: 0;
+  transition: opacity 1s ease-in, transform 0.5s ease;
+  position: absolute;
+  width: 120px!important;
+}
+
+.no-animation {
+  transition: none!important;
+}
+
+
+.animation-img img {
+  vertical-align: top;
+  width: 120px;
+}
+
+.animation-img h2 {
+  text-wrap: nowrap;
+  text-align: center;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 25px;
+}
+
+.animation-img figcaption {
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1s ease-in, transform 0.5s ease;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-wrap: nowrap;
+  white-space: pre-line;
+}
+
+.annotation-canvas {
+  width: 50%;
+  padding-left: $padding-left-right;
+}
+
+
+.annotation-container {
+  padding-bottom: 90vh;
+}
+
+.annotation-container:first-of-type {
+  padding-top: 60vh;
+}
+
+.annotation-card {
+  border-radius: 10px;
+  background-color: rgb(228, 228, 228);
+  padding: 10px;
+  width: 80%;
+  box-sizing: border-box;
+  padding-left: 20px;
+}
+
+.dark .annotation-card {
+  background-color: #212529;
+}
+
+.canvas {
+  display: flex;
+}
+
+.intro-algorithm {
+  padding-top: 10vh;
+  padding-bottom: 20vh;
+  padding-left: 30%;
+  padding-right: 30%;
+}
+
+.intro-title {
+  padding-top: 10vh;
+}
+
+.centered-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}

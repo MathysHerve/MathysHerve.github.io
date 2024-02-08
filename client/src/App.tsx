@@ -1,28 +1,19 @@
-import Navbar from "./components/Navbar";
-import MainPage from "./pages/MainPage/MainPage";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import {DarkModeProvider } from './DarkModeContext'
-import { useReducer, useState } from "react";
-import Knapsack from "./pages/Algorithms/Knapsack/Knapsack";
+import HomeNavbar from "./components/HomeNavbar";
+import HomePage from "./components/HomePage";
 
 function App() {
 
 
   return (
-    <DarkModeProvider>
-
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Navbar />}>
-              <Route index element={<MainPage />} />
-              <Route path="algorithms/"> 
-                <Route path="knapsack" element={<Knapsack />} />
-              </Route>
-            </Route>
-          </Routes>
-        </BrowserRouter>
-
-    </DarkModeProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomeNavbar />}>
+            <Route index element={<HomePage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
   );
 }
 
