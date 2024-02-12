@@ -1,7 +1,9 @@
 
+
 .three * {
     font-family: "Poppins", sans-serif;
     background-color: black;
+    color: white;
     padding: 0%;
 }
 
@@ -16,13 +18,27 @@
     font-weight: 550;
 }
 
-.three .container-fluid {
+::-webkit-scrollbar {
+    display: none;
+}
+
+.three {
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    position: absolute;
-    z-index: -1;
+    padding-left: 0 !important;
+    margin: 0%;
+    position: fixed;
+    z-index: 1;
+    background-color: black;
+}
+
+.three.title {
+    z-index: 2;
+    position: relative;
+    clip-path: polygon(0% 90%, 100% 70%, 100% 0%, 0% 0%);
+
 }
 
 .three ul {
@@ -30,7 +46,7 @@
     margin-bottom: 0;
 }
 
-.three nav {
+.three-nav {
     color: white;
     z-index: 2;
     position: relative;
@@ -40,16 +56,23 @@
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 2%;
+    background-color: black;
 }
 
-.three nav a {
+.three-nav a {
     text-decoration: none;
     color: white;
     font-weight: bold;
 }
 
-.three nav ul {
+.three-nav ul {
     list-style: none;
     display: flex;
     gap: 4rem;
+}
+
+.scroll-section {
+    background-color: green;
+    width: 100%;
+    height: 2000px;
 }

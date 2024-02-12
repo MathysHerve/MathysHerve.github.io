@@ -3,6 +3,7 @@ import HomeNavbar from "./components/HomeNavbar";
 import HomePage from "./components/HomePage";
 import ThreePage from "./components/ThreePage";
 import ThreeNavbar from "./components/ThreeNavbar";
+import ThreePlayground from "./components/threePlayground";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         </Route>
         <Route path="/three" element={<ThreeNavbar />}>
           <Route index element={<ThreePage />} />
+          <Route path="playground" element={<ThreePlayground />} />
         </Route>
       </Routes>
     </BrowserRouter>

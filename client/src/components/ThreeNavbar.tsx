@@ -3,15 +3,15 @@ import { Outlet } from "react-router-dom";
 
 const ThreeNavbar = () => {
   return (
-    <div className="three">
-      <nav>
+    <>
+      <nav className="three-nav">
         <a href="/three">Sphere</a>
         <ul>
           <a href="/">Go Back</a>
         </ul>
       </nav>
       <Outlet />
-    </div>
+    </>
   );
 };
 
