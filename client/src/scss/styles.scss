@@ -3,10 +3,8 @@
 
 $card-border-radius: 30px;
 $navbar-padding-x: $padding-left-right;
+$body-bg: #c5c5c5;
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
-@media (prefers-color-scheme: dark) {
-    
-}
 

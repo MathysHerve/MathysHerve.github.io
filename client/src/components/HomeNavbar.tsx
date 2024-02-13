@@ -7,7 +7,7 @@ const HomeNavbar = () => {
     const isDarkMode = document.body.dataset.bsTheme === "dark";
 
     if (isDarkMode) {
-      delete document.body.dataset.bsTheme;
+      document.body.dataset.bsTheme = "light";
     } else {
       document.body.dataset.bsTheme = "dark";
     }

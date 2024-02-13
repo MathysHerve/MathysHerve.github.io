@@ -1,5 +1,8 @@
 @import "variables";
 
+body[data-bs-theme="light"] .navbar {
+  background-color: #c5c5c5 !important;
+}
 
 h1 {
   font-size: 60px;
@@ -9,8 +12,13 @@ h1 {
 // Project Cards
 
 .card-image {
-  width: 150px !important;
-  height: 150px !important;
+  width: 150px;
+  height: 150px;
+}
+
+body[data-bs-theme="light"] .card-image {
+
+  filter: drop-shadow(0px 0px 1px black);
 }
 
 .card-image g {

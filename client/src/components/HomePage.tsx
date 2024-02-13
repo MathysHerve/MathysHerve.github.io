@@ -44,7 +44,6 @@ const HomePage = () => {
         setButtonVariant("outline-light");
       } else {
         setButtonVariant("outline-dark");
-        S;
       }
     };
 
