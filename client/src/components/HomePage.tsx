@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import ThreeDText from "./ThreeDText";
 
@@ -33,6 +33,30 @@ const getStupidSVG = () => {
 };
 
 const HomePage = () => {
+  const [buttonVariant, setButtonVariant] = useState("outline-dark");
+
+  useEffect(() => {
+    const themeChangeListener = (event) => {
+      const isDarkMode = document.body.dataset.bsTheme === "dark";
+      console.log(isDarkMode);
+
+      if (isDarkMode) {
+        setButtonVariant("outline-light");
+      } else {
+        setButtonVariant("outline-dark");
+        S;
+      }
+    };
+
+    themeChangeListener(null);
+
+    window.addEventListener("themeChanged", themeChangeListener);
+
+    return () => {
+      window.removeEventListener("themeChanged", themeChangeListener);
+    };
+  }, []);
+
   return (
     <>
       <ThreeDText text="Hi, I'm Mathys" />
@@ -92,7 +116,7 @@ const HomePage = () => {
                 <Card.Text>
                   Created a React project using Vite + React + Flask.
                 </Card.Text>
-                <Button variant="primary">See the Website</Button>
+                <Button variant={buttonVariant}>See the Website</Button>
               </Card.Body>
             </Card>
           </Col>
@@ -104,7 +128,7 @@ const HomePage = () => {
                 <Card.Text>
                   Made interactive 3D frontend with Three.js
                 </Card.Text>
-                <Button variant="primary" href="/three">
+                <Button variant={buttonVariant} href="/three">
                   Go to 3D Stuff
                 </Button>
               </Card.Body>

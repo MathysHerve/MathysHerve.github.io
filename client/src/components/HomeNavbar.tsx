@@ -11,6 +11,10 @@ const HomeNavbar = () => {
     } else {
       document.body.dataset.bsTheme = "dark";
     }
+
+    window.dispatchEvent(
+      new CustomEvent("themeChanged", { detail: document.body.dataset.bsTheme })
+    );
   };
 
   return (
