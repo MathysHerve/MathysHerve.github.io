@@ -70,12 +70,12 @@ const HomePage = () => {
               I am a <b>Software Developer</b> driven by curiosity. Software is
               where I feel most creative and where I welcome all challenges. I
               graduated from <b>UC Berkeley</b> in 2024 and began my career with
-              Web Development!
+              Web Development.
             </p>
             <p>
               This website is meant to be a playground/display for my
-              curiosities, keep scrolling to see some of the projects I have
-              been a part of!
+              curiosities. Keep scrolling to see some of the projects I have
+              been a part of.
             </p>
           </Col>
           <Col xs="12" md="5">
@@ -107,7 +107,7 @@ const HomePage = () => {
               <Card.Img
                 className="mx-auto my-2 card-image"
                 variant="top"
-                src="public/react.svg"
+                src="react.svg"
               />
 
               <Card.Body>
