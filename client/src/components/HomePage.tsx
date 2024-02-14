@@ -127,7 +127,7 @@ const HomePage = () => {
                 <Card.Text>
                   Made interactive 3D frontend with Three.js
                 </Card.Text>
-                <Button variant={buttonVariant} href="/three">
+                <Button variant={buttonVariant} href="#/three">
                   Go to 3D Stuff
                 </Button>
               </Card.Body>

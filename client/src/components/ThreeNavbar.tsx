@@ -5,7 +5,7 @@ const ThreeNavbar = () => {
   return (
     <>
       <nav className="three-nav">
-        <a href="/three">Sphere</a>
+        <a href="#/three">Sphere</a>
         <ul>
           <a href="/">Go Back</a>
         </ul>
